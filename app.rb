@@ -24,6 +24,7 @@ end
 get '/movies/:id' do
   @movie = Movie.find(params[:id])
   @tags = @movie.tags
+  @comments = @movie.comments
   erb :"movies/show"
 end
 
